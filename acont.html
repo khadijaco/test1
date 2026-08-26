@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📊 منصة التداول الافتراضية</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+    <div class="container">
+        <!-- ===== رأس الصفحة ===== -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <h1>تداول<span>VIP</span></h1>
+            </div>
+            <div class="header-balance">
+                <span>💰 الرصيد</span>
+                <span id="balance">10,000.00</span>
+                <span>$</span>
+            </div>
+        </header>
+
+        <!-- ===== الإحصائيات السريعة ===== -->
+        <div class="quick-stats">
+            <div class="stat-box">
+                <span>📈 الربح اليومي</span>
+                <span id="dailyProfit" class="profit">+0.00</span>
+            </div>
+            <div class="stat-box">
+                <span>📊 عدد الصفقات</span>
+                <span id="totalTrades">0</span>
+            </div>
+            <div class="stat-box">
+                <span>🏆 الصفقات الرابحة</span>
+                <span id="winRate">0%</span>
+            </div>
+        </div>
+
+        <!-- ===== الأسعار الحية ===== -->
+        <div class="prices-section">
+            <h2><i class="fas fa-bolt"></i> الأسعار الحية</h2>
+            <div class="prices-grid" id="pricesGrid">
+                <!-- سيتم إنشاؤها بواسطة JavaScript -->
+            </div>
+        </div>
+
+        <!-- ===== الرسم البياني ===== -->
+        <div class="chart-section">
+            <h2><i class="fas fa-chart-area"></i> الرسم البياني</h2>
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+
+        <!-- ===== التداول ===== -->
+        <div class="trading-section">
+            <h2><i class="fas fa-hand-holding-usd"></i> تنفيذ صفقة</h2>
+            <div class="trading-form">
+                <div class="form-group">
+                    <label>الأصل</label>
+                    <select id="assetSelect">
+                        <option value="BTC">Bitcoin (BTC)</option>
+                        <option value="ETH">Ethereum (ETH)</option>
+                        <option value="AAPL">Apple (AAPL)</option>
+                        <option value="TSLA">Tesla (TSLA)</option>
+                        <option value="GOOGL">Google (GOOGL)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>نوع الصفقة</label>
+                    <div class="trade-type">
+                        <button id="buyBtn" class="trade-btn buy">🟢 شراء</button>
+                        <button id="sellBtn" class="trade-btn sell">🔴 بيع</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>الكمية</label>
+                    <input type="number" id="quantityInput" value="1" min="0.01" step="0.01" />
+                </div>
+                <div class="form-group">
+                    <label>السعر الحالي</label>
+                    <input type="text" id="currentPriceInput" readonly />
+                </div>
+                <div class="form-group">
+                    <label>القيمة الإجمالية</label>
+                    <input type="text" id="totalValueInput" readonly />
+                </div>
+                <button id="executeBtn" class="execute-btn">🚀 تنفيذ الصفقة</button>
+            </div>
+        </div>
+
+        <!-- ===== المحفظة ===== -->
+        <div class="portfolio-section">
+            <h2><i class="fas fa-wallet"></i> محفظتي</h2>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <div class="empty-portfolio">
+                    <i class="fas fa-box-open"></i>
+                    <p>لا توجد أصول في المحفظة</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== تاريخ الصفقات ===== -->
+        <div class="history-section">
+            <h2><i class="fas fa-clock-rotate-left"></i> تاريخ الصفقات</h2>
+            <div class="history-list" id="historyList">
+                <div class="empty-history">
+                    <p>📭 لا توجد صفقات بعد</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== أزرار التحكم ===== -->
+        <div class="actions">
+            <button id="resetBtn" class="action-btn danger">
+                <i class="fas fa-rotate"></i> إعادة تعيين
+            </button>
+            <button id="exportBtn" class="action-btn">
+                <i class="fas fa-file-export"></i> تصدير التقرير
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== Toast ===== -->
+    <div id="toast">
+        <span id="toastMessage"></span>
+        <button onclick="closeToast()">&times;</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

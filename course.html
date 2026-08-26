@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <!--     رابظ ايقوناتت -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+<!-- ربط مكتبة FontAwesome (للأيقونات الاحترافية مثل أبل) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- اخر درس   ولايقونات        -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!--عشاان الخطوط تحت راوابط تأكد من هذا الرابط -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+      <style>
+      .hover-scale {
+        transition: transform 0.4s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.08);
+      }
+     
+      .btn-hover-red:hover {
+        background-color: rgb(160, 92, 92) !important;
+      }
+    </style>
+</head>
+<body>
+    
+ <div class="navbar navbar-expand-lg bg-white py-3 fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold fs-4" href="#">🎓 Eduleb</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          data-bs-content="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end bg-dark text-white"
+          tabindex="-1"
+          id="offcanvasExample"
+          data-bs-scroll="true"
+          data-bs-backdrop="false"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">menu</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body bg-white">
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a class="nav-link fw-semibold text-dark" href="./index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold text-dark" href="./abut.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold text-dark" href="./course.html">COURSE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold text-dark" href="./pages.html">PAGES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold text-dark" href="./blog.html">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold text-dark" href="./acont.html">CONTACT</a>
+              </li>
+            </ul>
+            <div class="d-none d-lg-flex align-items-center gap-3">
+              <a
+                href="#"
+                class="fw-semibold text-dark text-decoration-none px-4 py-2"
+                >Sign In</a
+              >
+              <a href="./acont.html" class="btn btn-primary rounded-pill px-4 py-2"
+                >Sign Up</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div class="py-5 text-center" style="background: linear-gradient(#f7f6f3 0%, #b79da1 50%, #aea4d1 100%); min-height:350px; display:flex; align-items:center;">
+  <div class="container">
+    <h1 class="fw-bold display-4">All Course</h1>
+    <p class="mt-2">
+      <a href="index.html" class="text-primary text-decoration-none fw-semibold">Home</a>
+      <span class="text-dark"> /  Course</span>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+    <div class="py-5">
+      <div class="container">
+        <div class="row g-4 mt-4">
+          <div class="col-md-4">
+            <div class="bg-white rounded-4 shadow-sm">
+              <div class="position-relative">
+                <img
+                  src="./4.jpg"
+                  class="w-100"
+                  style="height: 220px; object-fit: cover"
+                />
+                <span
+                  class="position-absolute top-0 start-0 bg-primary text-white px-2 py-3 small btn-hover-red"
+                  style="writing-mode: vertical-rl"
+                  >Education</span
+                >
+              </div>
+              <div class="p-3">
+                <div class="text-warning mb-2">★★★★★</div>
+                <h5 class="fw-bold">
+                  Complete User fundamentals beginners to advanced
+                </h5>
+                <div class="text-muted small d-flex gap-3">
+                  <span>📖 12 Course</span>
+                  <span>🕒 2 Hrs 32 Min</span>
+                </div>
+              </div>
+              <hr />
+              <div class="p-3 fw-semibold text-primary">Course Fee - 99$</div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="bg-white rounded-4 shadow-sm">
+              <div class="position-relative">
+                <img
+                  src="./5.jpg"
+                  class="w-100"
+                  style="height: 220px; object-fit: cover"
+                  alt="Course"
+                />
+                <span
+                  class="position-absolute top-0 start-0 bg-primary text-white px-2 py-3 small btn-hover-red"
+                  style="writing-mode: vertical-rl"
+                  >UI/UX</span
+                >
+              </div>
+              <div class="p-3">
+                <div class="text-warning mb-2">★★★★★</div>
+                <h5 class="fw-bold">
+                  Advanced Android 12 & Kotlin Development Course
+                </h5>
+                <div class="text-muted small d-flex gap-3">
+                  <span>📖 41 Course</span>
+                  <span>🕒 3 Hrs 32 Min</span>
+                </div>
+              </div>
+              <hr />
+              <div class="p-3 fw-semibold text-primary">Course Fee - 49$</div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="bg-white rounded-4 shadow-sm">
+              <div class="position-relative">
+                <img
+                  src="./4.jpg"
+                  class="w-100"
+                  style="height: 220px; object-fit: cover"
+                  alt="Course"
+                />
+                <span
+                  class="position-absolute top-0 start-0 bg-primary text-white px-2 py-3 small btn-hover-red"
+                  style="writing-mode: vertical-rl"
+                  >Lifestyle</span
+                >
+              </div>
+              <div class="p-3">
+                <div class="text-warning mb-2">★★★★★</div>
+                <h5 class="fw-bold">
+                  Complete HTML, CSS and Javascript Course
+                </h5>
+                <div class="text-muted small d-flex gap-3">
+                  <span>📖 32 Course</span>
+                  <span>🕒 2 Hrs 32 Min</span>
+                </div>
+              </div>
+              <hr />
+              <div class="p-3 fw-semibold text-primary">Course Fee - Free</div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="bg-white rounded-4 shadow-sm">
+              <div class="position-relative">
+                <img
+                  src="./4.jpg"
+                  class="w-100"
+                  style="height: 220px; object-fit: cover"
+                  alt="Course"
+                />
+                <span
+                  class="position-absolute top-0 start-0 bg-primary text-white px-2 py-3 small btn-hover-red"
+                  style="writing-mode: vertical-rl"
+                  >Science</span
+                >
+              </div>
+              <div class="p-3">
+                <div class="text-warning mb-2">★★★★★</div>
+                <h5 class="fw-bold">
+                  IOS and Swift Complete iOS Application Development
+                </h5>
+                <div class="text-muted small d-flex gap-3">
+                  <span>📖 19 Course</span>
+                  <span>🕒 2 Hrs 32 Min</span>
+                </div>
+              </div>
+              <hr />
+              <div class="p-3 fw-semibold text-primary">Course Fee - 59$</div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="bg-white rounded-4 shadow-sm">
+              <div class="position-relative">
+                <img
+                  src="./5.jpg"
+                  class="w-100"
+                  style="height: 220px; object-fit: cover"
+                  alt="Course"
+                />
+                <span
+                  class="position-absolute top-0 start-0 bg-primary text-white px-2 py-3 small btn-hover-red"
+                  style="writing-mode: vertical-rl"
+                  >Modern</span
+                >
+              </div>
+              <div class="p-3">
+                <div class="text-warning mb-2">★★★★★</div>
+                <h5 class="fw-bold">
+                  Learn graphics design with a best IT Trainer
+                </h5>
+                <div class="text-muted small d-flex gap-3">
+                  <span>📖 22 Course</span>
+                  <span>🕒 2 Hrs 32 Min</span>
+                </div>
+              </div>
+              <hr />
+              <div class="p-3 fw-semibold text-primary">Course Fee - 79$</div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="bg-white rounded-4 shadow-sm">
+              <div class="position-relative">
+                <img
+                  src="./4.jpg"
+                  class="w-100"
+                  style="height: 220px; object-fit: cover"
+                  alt="Course"
+                />
+                <span
+                  class="position-absolute top-0 start-0 bg-primary text-white px-2 py-3 small btn-hover-red"
+                  style="writing-mode: vertical-rl"
+                  >Marketing</span
+                >
+              </div>
+              <div class="p-3">
+                <div class="text-warning mb-2">★★★★★</div>
+                <h5 class="fw-bold">
+                  Complete data science for your next business
+                </h5>
+                <div class="text-muted small d-flex gap-4">
+                  <span>📖 11 Course</span>
+                  <span>🕒 2 Hrs 32 Min</span>
+                </div>
+              </div>
+              <hr />
+              <div class="p-3 fw-semibold text-primary">Course Fee - 39$</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+<footer class="py-5 bg-light" style="border-top: 1px solid #f1f3ec ">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3 col-6">
+        <a href="#" class="d-flex align-items-center gap-2 text-decoration-none mb-3">
+          <span class="fs-3">🎓</span>
+          <span class="fw-bold fs-4 text-dark">Eduleb</span>
+        </a>
+        <p class="text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
+          venenatis dignissim.
+        </p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="#" class="bg-white border rounded-circle d-flex align-items-center justify-content-center text-dark btn-hover-red" style="width:40px;height:40px;"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="bg-white border rounded-circle d-flex align-items-center justify-content-center text-dark btn-hover-red" style="width:40px;height:40px;"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="bg-white border rounded-circle d-flex align-items-center justify-content-center text-dark btn-hover-red" style="width:40px;height:40px;"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="bg-white border rounded-circle d-flex align-items-center justify-content-center text-dark btn-hover-red" style="width:40px;height:40px;"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+   
+      <div class="col-md-3 col-6">
+        <h5 class="fw-bold mb-3">About Eduleb</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none ">About Us</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Instructor Registration</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Become A Teacher</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">All Instrustors</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Asked Question</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Contact Us</a></li>
+        </ul>
+      </div>
+
+  
+      <div class="col-md-3 col-6">
+        <h5 class="fw-bold mb-3">Popular Courese</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Development</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Arts & Design</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Visual Design</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Graphic Design</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Code Inspection</a></li>
+          <li class="mb-2"><a href="#" class="link-primary text-muted text-decoration-none">Digital Marketing</a></li>
+        </ul>
+      </div>
+
+    
+      <div class="col-md-3 col-6">
+        <h5 class="fw-bold mb-3">Contact Info</h5>
+        <div class="d-flex gap-2 mb-3">
+          <span>🗺️</span>
+          <span class="text-muted">2570 Quadra Street Victoria Road, New York, Canada</span>
+        </div>
+        <div class="d-flex gap-2 mb-3">
+          <span>📱</span>
+          <span class="text-muted">+88 457 845 695</span>
+        </div>
+        <div class="d-flex gap-2 mb-3">
+          <span>📱</span>
+          <a href="#" class="text-primary text-decoration-none">Contact Whatsapp</a>
+        </div>
+        <div class="d-flex gap-2 mb-3">
+          <span>✉️</span>
+          <span class="text-muted">example@yourmail.com</span>
+        </div>
+      </div>
+
+     
+      <div class="col-md-12">
+        <h5 class="fw-bold mb-3" style="color: rgb(32, 18, 91);"
+        >Download App</h5>
+        <p class="text-muted">
+          Download our app from app store and goole play store.
+        </p>
+        <a href="#" class="d-flex align-items-center gap-2 bg-primary text-white rounded-3 p-2 mb-2" style="width:200px;">
+          <span class="fs-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google-play" viewBox="0 0 16 16">
+  <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055zM1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27"/>
+</svg></span>
+          <span>
+            <small class="d-block">Download on</small>
+            <strong>Google Play</strong>
+          </span>
+        </a>
+        <a href="#" class="d-flex align-items-center gap-2 bg-dark text-white rounded-3 p-2" style="width:200px;">
+          <span class="fs-4"></span>
+          <span>
+            <span class="fs-4"><i class="fa-brands fa-app-store-ios fa-2x" style="color: #fff; background-color: rgb(8, 32, 189);"></i></span>
+            <small class="d-block">Download on</small>
+            <strong>App Store</strong>
+          </span>
+        </a>
+      </div>
+
+    </div>
+
+    
+    <hr class="my-4">
+    <p class="text-center text-muted mb-0">
+      © 2024. All Rights Reserved by 
+      <a href="#" class="text-primary text-decoration-none fw-semibold">Bestwpware</a>
+      • Distributed by <a href="#" class="text-primary text-decoration-none fw-semibold">ThemeWagon</a>
+    </p>
+
+  </div>
+</footer>
+
+
+
+
+
+
+ <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  
+
+
+</body>
+</html>

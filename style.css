@@ -1,0 +1,594 @@
+/* ==========================================
+   📊 منصة التداول الافتراضية - CSS
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0a0a1a;
+    --bg-secondary: #12122a;
+    --bg-card: rgba(255, 255, 255, 0.04);
+    --text-primary: #ffffff;
+    --text-secondary: #8888aa;
+    --border-color: rgba(255, 255, 255, 0.06);
+    --green: #22c55e;
+    --red: #ef4444;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== رأس الصفحة ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo i {
+    font-size: 32px;
+    color: var(--green);
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.header-balance {
+    background: rgba(34, 197, 94, 0.1);
+    padding: 10px 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    text-align: center;
+}
+
+.header-balance span:first-child {
+    display: block;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.header-balance span:nth-child(2) {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--green);
+}
+
+.header-balance span:last-child {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+/* ===== الإحصائيات السريعة ===== */
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    background: var(--bg-secondary);
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-3px);
+    border-color: var(--purple);
+}
+
+.stat-box span:first-child {
+    display: block;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.stat-box span:last-child {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.stat-box .profit {
+    color: var(--green);
+}
+
+.stat-box .profit.negative {
+    color: var(--red);
+}
+
+/* ===== الأسعار الحية ===== */
+.prices-section {
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.prices-section h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.prices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.price-card {
+    background: var(--bg-card);
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.price-card:hover {
+    border-color: var(--purple);
+    transform: translateY(-3px);
+}
+
+.price-card .symbol {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.price-card .name {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 4px 0 8px;
+}
+
+.price-card .price {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.price-card .change {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.price-card .change.up {
+    color: var(--green);
+}
+
+.price-card .change.down {
+    color: var(--red);
+}
+
+/* ===== الرسم البياني ===== */
+.chart-section {
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.chart-section h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.chart-container {
+    height: 300px;
+    position: relative;
+}
+
+/* ===== التداول ===== */
+.trading-section {
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.trading-section h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.trading-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.form-group select,
+.form-group input {
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    border-color: var(--purple);
+}
+
+.form-group input[readonly] {
+    color: var(--text-secondary);
+    cursor: default;
+}
+
+.trade-type {
+    display: flex;
+    gap: 10px;
+}
+
+.trade-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.trade-btn.buy {
+    background: var(--green);
+}
+
+.trade-btn.buy:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+}
+
+.trade-btn.sell {
+    background: var(--red);
+}
+
+.trade-btn.sell:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+.trade-btn.active {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.execute-btn {
+    grid-column: span 2;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.execute-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+}
+
+/* ===== المحفظة ===== */
+.portfolio-section {
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.portfolio-section h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.portfolio-item {
+    background: var(--bg-card);
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+    border-color: var(--purple);
+}
+
+.portfolio-item .p-symbol {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.portfolio-item .p-amount {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.portfolio-item .p-value {
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 4px;
+}
+
+.portfolio-item .p-profit {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.portfolio-item .p-profit.up {
+    color: var(--green);
+}
+
+.portfolio-item .p-profit.down {
+    color: var(--red);
+}
+
+.empty-portfolio {
+    grid-column: span 1;
+    text-align: center;
+    padding: 40px;
+    color: var(--text-secondary);
+}
+
+.empty-portfolio i {
+    font-size: 48px;
+    opacity: 0.3;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ===== تاريخ الصفقات ===== */
+.history-section {
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.history-section h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.history-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: var(--bg-card);
+    border-radius: 10px;
+    margin-bottom: 6px;
+    border-right: 3px solid var(--purple);
+    animation: slideIn 0.3s ease;
+}
+
+.history-item.buy {
+    border-right-color: var(--green);
+}
+
+.history-item.sell {
+    border-right-color: var(--red);
+}
+
+.history-item .h-asset {
+    font-weight: 700;
+}
+
+.history-item .h-type {
+    font-size: 13px;
+    padding: 2px 12px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.history-item .h-type.buy {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--green);
+}
+
+.history-item .h-type.sell {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--red);
+}
+
+.history-item .h-price {
+    font-weight: 600;
+}
+
+.empty-history {
+    text-align: center;
+    padding: 30px;
+    color: var(--text-secondary);
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== أزرار التحكم ===== */
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn.danger {
+    background: linear-gradient(135deg, var(--red), #dc2626);
+}
+
+.action-btn.danger:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+.action-btn:not(.danger) {
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+}
+
+.action-btn:not(.danger):hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* ===== Toast ===== */
+#toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 16px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transform: translateX(120%);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+#toast.show {
+    transform: translateX(0);
+}
+
+#toast button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ===== Scrollbar ===== */
+.history-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.history-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 10px;
+}
+
+/* ===== متجاوب ===== */
+@media (max-width: 768px) {
+    .trading-form {
+        grid-template-columns: 1fr;
+    }
+    .execute-btn {
+        grid-column: span 1;
+    }
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+    .prices-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
